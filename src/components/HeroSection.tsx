@@ -141,12 +141,12 @@ const ImagesSlider = ({
 export default function HeroSection() {
   // Replace these placeholder URLs with your 4 villa hotel images
   const images = [
-    "./src/assets/images/hero/hero-1.jpg", // Replace with your first villa image
-    "./src/assets/images/hero/hero-2.jpg", // Replace with your second villa image
-    "./src/assets/images/hero/hero-3.jpg", // Replace with your third villa image
-    "./src/assets/images/hero/hero-4.jpg", 
-    "./src/assets/images/hero/hero-5.jpg", // Replace with your fourth villa image
-    "./src/assets/images/hero/hero-6.jpg", // Replace with your fourth villa image
+    "/assets/images/hero/hero-1.jpg", // Replace with your first villa image
+    "/assets/images/hero/hero-2.jpg", // Replace with your second villa image
+    "/assets/images/hero/hero-3.jpg", // Replace with your third villa image
+    "/assets/images/hero/hero-4.jpg", 
+    "/assets/images/hero/hero-5.jpg", // Replace with your fourth villa image
+    "/assets/images/hero/hero-6.jpg", // Replace with your fourth villa image
     // Replace with your fourth villa image
   ];
 
