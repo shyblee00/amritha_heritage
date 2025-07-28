@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Instagram, Facebook, MessageCircle, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const navItems = [
   {
@@ -115,6 +116,7 @@ function MenuToggle({ isOpen, toggle, scrolled }) {
 export default function Navigation({ alwaysScrolled = false }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(alwaysScrolled);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (alwaysScrolled) return;
@@ -190,7 +192,7 @@ export default function Navigation({ alwaysScrolled = false }) {
                     : "bg-[#fff] text-[#382f2d] hover:bg-[#d7cdc3] hover:text-black"
                 }`}
                 style={{ borderRadius: "0px" }}
-                onClick={() => {}}
+                onClick={() => navigate('/booking')}
               >
                 Book Now
               </motion.button>
@@ -207,8 +209,8 @@ export default function Navigation({ alwaysScrolled = false }) {
         {/* Book Now button - mobile only */}
         <button
           className="block sm:hidden mb-2 px-2 py-1 bg-white text-white font-bold rounded-lg shadow-lg flex items-center justify-center h-10 w-10"
-          style={{ borderRadius: "0.5rem" }}
-          onClick={() => { /* Add booking logic here */ }}
+          style={{ fontFamily: 'Cormorant Garamond, serif', borderRadius: '0.5rem' }}
+          onClick={() => navigate('/booking')}
         >
           {/* Booking icon image */}
           <img src="/assets/logo/booking.png" alt="Book Now" className="h-5 w-5 object-contain" />
@@ -286,7 +288,7 @@ export default function Navigation({ alwaysScrolled = false }) {
                         variant="outline"
                         className="hidden sm:block tracking-widest px-3 sm:px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 text-xs sm:text-sm md:text-base lg:text-lg font-black bg-[#5e5554] text-white hover:bg-[#5a413d] hover:text-white transition-all duration-300"
                         style={{ borderRadius: "0px" }}
-                        onClick={() => {}}
+                        onClick={() => navigate('/booking')}
                       >
                         BOOK
                       </Button>
